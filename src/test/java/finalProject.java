@@ -57,7 +57,8 @@ public class finalProject {
 
         //Go to 'კინო'
         //driver.findElement(By.xpath("//label[text()='კინო']")).click();
-        driver.findElement(By.cssSelector("img[src='https://cdn.swoop.ge/images/icons/_block1.png']")).click();
+       driver.findElement(By.cssSelector("img[src='https://cdn.swoop.ge/images/icons/_block1.svg']")).click();
+
 
         //Select the first movie in the returned list and click on ‘ყიდვა’ button
         List<WebElement> moviesList = driver.findElements(By.cssSelector("div.movies-deal"));
