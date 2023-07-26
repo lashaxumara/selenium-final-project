@@ -29,15 +29,8 @@ public class finalProject {
     WebDriverWait wait;
 
     @BeforeMethod
-    @Parameters("browser")
-    public void beforMethod(String browser) {
-        if (browser.equalsIgnoreCase("chrome")) {
-            WebDriverManager.chromedriver().setup();
-            driver = new ChromeDriver();
-        } else if (browser.equalsIgnoreCase("edge")) {
-            WebDriverManager.edgedriver().setup();
-            driver = new EdgeDriver();
-        }
+    public void beforMethod() {
+        driver = new ChromeDriver();
         action = new Actions(driver);
         js = (JavascriptExecutor) driver;
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
